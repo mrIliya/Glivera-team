@@ -1,0 +1,19 @@
+@charset "UTF-8";
+// 1. variables
+@import "./variables/variables";
+
+// 2. Base
+@import "./core/base", "./core/normalize";
+
+// 3. Fonts
+@import "./fonts/fonts";
+
+// 4. components
+@import "./components/header", "./components/main-screen", "./components/tags",
+  "./components/posts", "./components/posts-aside", "./components/offers",
+  "./components/footer";
+
+// 5. Media
+@import "./media/header-media", "./media/main-screen-media",
+  "./media/tags-media", "./media/posts-media", "./media/offers-media",
+  "./media/footer-media", "./media/media";

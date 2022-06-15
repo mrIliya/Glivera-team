@@ -1,0 +1,160 @@
+@media (max-width: 1200px) {
+  .header {
+    &__buttons {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    &__inner {
+      height: 95px;
+    }
+
+    &__menu {
+     
+
+      &.active {
+         padding-top: 0;
+        padding-bottom: 0;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        
+      }
+    }
+  }
+
+  .header-burger {
+    display: block;
+    margin-right: 24px;
+    z-index: 99;
+    overflow: hidden;
+    transition: all linear 0.4s;
+
+    .header-burger__line {
+      transition: all linear 0.4s;
+
+      &:nth-child(2) {
+        transform: translateX(0);
+      }
+
+      &:nth-child(1) {
+        transform: rotate(0deg) translate(0, 0);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(0deg) translate(0, 0);
+      }
+    }
+
+    &.active {
+      .header-burger__line {
+        &:nth-child(2) {
+          transform: translateX(-100%);
+        }
+
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(20%, 200%);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(25%, -200%);
+        }
+      }
+    }
+  }
+
+  .header-nav {
+    opacity: 1;
+    transform: translateX(-100%);
+    position: fixed;
+    padding-top: 120px;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .header-nav__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 36px;
+
+      li + li {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .header {
+    &__started {
+      width: 126px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header-message {
+    height: 68px;
+
+    &__inner {
+      padding: 11px 4px 13px 20px;
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px 15px;
+    }
+
+    &__data {
+      order: 1;
+      margin-left: 0;
+    }
+
+    &__link {
+      margin-left: auto;
+      margin-right: 40px;
+    }
+
+    &__btn {
+      height: 24px;
+      top: 10px;
+      right: 10px;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &__menu {
+      padding: 20px 11px;
+      padding-top: 0;
+      height: 95px;
+    }
+
+    &__login {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .header {
+    &__started {
+      width: 110px;
+    }
+  }
+
+  .header-burger {
+    margin-right: 19px;
+  }
+}

@@ -1,0 +1,107 @@
+.posts-aside {
+  padding-left: 60px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 1px;
+    height: calc(100% - 47px);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $main-border;
+  }
+
+  &__search {
+    @include search;
+  }
+
+  &__input {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    height: 59px;
+    padding: 16px 15px 15px 58px;
+
+    border: 1px solid #d7d8d9;
+    border-radius: 4px;
+
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text-color;
+
+    &::placeholder {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+      color: $text-color;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 20px;
+    left: 21px;
+  }
+
+  &__poster {
+    margin-bottom: 51px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__image {
+    margin-left: -10px;
+  }
+}
+
+.aside-item {
+  padding-bottom: 12px;
+  border-bottom: 1px solid $main-border;
+  margin-bottom: 32px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 34px;
+    color: $text-color;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__line {
+    position: relative;
+    padding-left: 9px;
+    margin-bottom: 16px;
+
+    &::before {
+      content: "";
+      width: 2.5px;
+      height: 2.5px;
+      background-color: $main-green;
+
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $text-semidark;
+  }
+}

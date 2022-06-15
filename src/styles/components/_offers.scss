@@ -1,0 +1,205 @@
+.offers {
+  padding: 100px 0 49px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #3d4251 0%, #272b35 100%);
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64px;
+
+    text-align: center;
+    letter-spacing: -0.5px;
+
+    color: #ffffff;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 380px;
+    margin-bottom: 54px;
+  }
+}
+
+.offers-item {
+  background: #ffffff;
+  border: 1px solid $main-border;
+  border-radius: 6px;
+
+  width: 380px;
+  min-height: 340px;
+  padding: 48px 20px 40px 20px;
+
+  transition: all linear 0.4s;
+  color: $text-semidark;
+  filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.501961));
+
+  &__period {
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    position: relative;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all linear 0.4s;
+
+    &::after {
+      content: "";
+      height: 2px;
+      width: 24px;
+      background-color: $main-green;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__price {
+    padding-bottom: 18px;
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid $main-border;
+    color: $text-color;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 300;
+  }
+
+  &__currency {
+    vertical-align: top;
+  }
+
+  &__number {
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -1.5px;
+  }
+
+  &__month {
+    vertical-align: bottom;
+  }
+
+  &__info {
+    min-height: 79px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all linear 0.4s;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__prev {
+    margin-right: 6px;
+    text-decoration-line: line-through;
+    color: #f24458;
+  }
+
+  &__save {
+    margin-top: 4px;
+    font-weight: 700;
+  }
+
+  &__btn {
+    @include main-btn;
+    max-width: 205px;
+    margin: 0 auto;
+  }
+
+  & + div {
+    margin-left: 20px;
+  }
+
+  &.active {
+    min-height: 380px;
+    max-height: 380px;
+    padding: 59px 20px 40px 20px;
+    border: 4px solid $main-green;
+
+    .offers-item__period {
+      padding-bottom: 16px;
+      margin-bottom: 14px;
+    }
+
+    .offers-item__info {
+      min-height: 89px;
+      transition: all linear 0.4s;
+    }
+
+    .offers-item__btn {
+      border: transparent;
+      color: #fff;
+      background: linear-gradient(0deg, $main-green 0%, #5ddf5a 100%);
+    }
+  }
+}
+
+.offers-payments {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 33px;
+  }
+
+  &__ways {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__line {
+    margin-left: 30px;
+  }
+
+  &__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: $main-green;
+
+    &+a{
+        margin-left: 40px;
+    }
+  }
+
+  &__img{
+    margin-left: 12px;
+    margin-bottom: 2px;
+  }
+}
